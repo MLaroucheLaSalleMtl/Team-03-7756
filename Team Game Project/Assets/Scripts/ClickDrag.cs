@@ -17,6 +17,10 @@ public class ClickDrag : MonoBehaviour
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
 
+    //public void Update()
+    //{
+    //    gameObject.GetComponent<HingeJoint2D>().attachedRigidbody.MovePosition(gameObject.GetComponent<Rigidbody2D>().position);
+    //}
     /// <summary>
     /// Allows for the object to move according to mouse click and drag
     /// </summary>
