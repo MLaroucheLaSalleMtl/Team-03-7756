@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 957599404}
   - component: {fileID: 957599403}
   - component: {fileID: 957599402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: base_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,12 +287,12 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 1}
-  m_ConnectedAnchor: {x: 0.014000002, y: -0.004000008}
-  m_UseMotor: 0
+  m_ConnectedAnchor: {x: 0.014000002, y: -0.0040000677}
+  m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+    m_MotorSpeed: -100
+    m_MaximumMotorForce: 100
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
@@ -401,7 +401,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 1019806078}
   - component: {fileID: 1019806077}
   - component: {fileID: 1019806080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sling_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1434262632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trebuchet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434262629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.157, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1906776502}
@@ -874,10 +874,10 @@ GameObject:
   - component: {fileID: 1906776502}
   - component: {fileID: 1906776505}
   - component: {fileID: 1906776504}
+  - component: {fileID: 1906776503}
   - component: {fileID: 1906776506}
   - component: {fileID: 1906776507}
-  - component: {fileID: 1906776503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: counterweight_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906776501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.648, y: -1.253, z: 0}
+  m_LocalPosition: {x: 2.63, y: -1.244, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434262632}
@@ -936,14 +936,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!212 &1906776505
 SpriteRenderer:
@@ -1042,8 +1042,7 @@ GameObject:
   - component: {fileID: 1989858138}
   - component: {fileID: 1989858137}
   - component: {fileID: 1989858141}
-  - component: {fileID: 1989858142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: beam_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1173,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -2.6, y: -0.06}
-  m_ConnectedAnchor: {x: 0.007000208, y: 0.656}
+  m_ConnectedAnchor: {x: 0.007000208, y: 0.65599996}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1183,27 +1182,3 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 30
     m_UpperAngle: 230
---- !u!233 &1989858142
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989858135}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1906776504}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 2.63, y: -0.06}
-  m_ConnectedAnchor: {x: 0.018000126, y: 0.357}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 180
