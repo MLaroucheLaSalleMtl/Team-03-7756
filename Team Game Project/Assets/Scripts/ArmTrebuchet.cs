@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class ArmTrebuchet : MonoBehaviour
 {
-    private Collider2D obj;
-
-    public void Start()
+    public void Update(Collider2D col)
     {
-        obj.GetComponent<Collider2D>();
+        if (gameObject.transform.position == col.transform.position)
+        {
+            gameObject.GetComponent<Rigidbody2D>().Sleep();
+        }
     }
 
-    void Update()
+    public void OnCollisionEnter(Collider2D col)
     {
-
-    }
-
-    public void OnCollisionEnter()
-    {
-        
+        if (col.name == "sling_2")
+        {
+            gameObject.transform.position = col.transform.position;
+        }
     }
 }

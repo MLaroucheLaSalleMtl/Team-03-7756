@@ -1212,15 +1212,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: projectile_test
       objectReference: {fileID: 0}
+    - target: {fileID: 6060814837693422952, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 6060814837693422869, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.101903
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 6060814837693422869, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.99
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 6060814837693422869, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
         type: 3}
@@ -1265,6 +1270,21 @@ PrefabInstance:
     - target: {fileID: 6060814837693422869, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060814837693422871, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060814837693422871, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060814837693422871, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
+        type: 3}
+      propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
