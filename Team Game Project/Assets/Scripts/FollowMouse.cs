@@ -12,6 +12,7 @@ public class FollowMouse : MonoBehaviour
         {
             playerPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             playerPosition.z = 0;
+            playerPosition.y = 0;
         }
         var vel = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, vel);
