@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
 
     public GameObject player;
-    float speed = 2;
+    [SerializeField] private float speed = 1;
     float x;
     float y;
 
