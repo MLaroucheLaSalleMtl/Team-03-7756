@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
 
-    public GameObject player;
+    public GameObject target;
     [SerializeField] private float speed = 1;
     float x;
     float y;
@@ -26,7 +26,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Move()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, Time.deltaTime * speed);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, Time.deltaTime * speed);
     }
 }
 
