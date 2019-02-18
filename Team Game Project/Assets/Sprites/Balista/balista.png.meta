@@ -1,7 +1,9 @@
 fileFormatVersion: 2
-guid: cba5996ba05668142aa773a03f368f65
+guid: 50125d77d01e7b444a147ab337bf872f
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: balista_0
+    21300002: balista_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,17 +42,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 3
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 8
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.35826772, y: 0.3017101}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -93,14 +95,51 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline:
-    - - {x: -112, y: 185.5}
-      - {x: -230, y: 54.5}
-      - {x: -116, y: -0.5}
+    sprites:
+    - serializedVersion: 2
+      name: balista_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 38
+        width: 179
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32bd931d62dadb469d2d7adbfd0eb95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balista_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 250
+        width: 462
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666c3ef4541fac14ab001ff220fc2ce1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
     physicsShape: []
     bones: []
-    spriteID: ec27a0b45208fb041a0f8efe269ad579
+    spriteID: 3939dd49ea9994548b36cc85b0e358a9
     vertices: []
     indices: 
     edges: []
