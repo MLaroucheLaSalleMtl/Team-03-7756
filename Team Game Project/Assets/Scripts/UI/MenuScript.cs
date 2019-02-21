@@ -6,8 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public AsyncOperation asyncVar;    
+    public AsyncOperation asyncVar;
+    public GameObject panelMenu;
+    public GameObject panelOptions;
 
+    public void Start()
+    {
+        panelOptions.SetActive(false);
+        panelMenu.SetActive(true);
+    }
     public void ExitGame()
     {
         Application.Quit();
@@ -21,6 +28,9 @@ public class MenuScript : MonoBehaviour
             asyncVar.allowSceneActivation = true;
         }
     }
-
-
+    public void Return()
+    {
+        panelOptions.SetActive(false);
+        panelMenu.SetActive(true);
+    }
 }
