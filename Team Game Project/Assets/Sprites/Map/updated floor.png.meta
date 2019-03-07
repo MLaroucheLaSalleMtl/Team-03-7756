@@ -3,10 +3,10 @@ guid: ae2b0058c8531d74bb6bdeb2fcd0ee7d
 TextureImporter:
   fileIDToRecycleName:
     21300000: ramp
-    21300002: pixil-frame-0 (5)_0
-    21300004: pixil-frame-0 (5)_1
+    21300002: field2
+    21300004: field1
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -129,7 +129,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (5)_0
+      name: field2
       rect:
         serializedVersion: 2
         x: 28
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (5)_1
+      name: field1
       rect:
         serializedVersion: 2
         x: 67
