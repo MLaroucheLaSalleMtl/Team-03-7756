@@ -8,9 +8,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text pointText;
     private int totalPoints;
     [SerializeField] private Text timerText;
-    private float timerCountDown = 90.0f;
+    private float timerCountDown = 20.0f;
 
-    [SerializeField] private Canvas endGame;
+    [SerializeField] private GameObject endGame;
+
+    public void Start()
+    {
+        Time.timeScale = 1.0f;
+        endGame.SetActive(false);
+    }
 
     public void Update()
     {
@@ -22,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             //LEVEL OVER
+            endGame.SetActive(true);
         }
     }
 
