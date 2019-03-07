@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-
     public Transform[] spawnPointArray;
     public GameObject testEnemyPrefab;
 
@@ -16,6 +15,11 @@ public class Spawner : MonoBehaviour
     {
         spawnRate = Random.Range(5f, 10f);
         InvokeRepeating("SpawnTest", startSpawnAt, spawnRate);
+    }
+
+    public void Update()
+    {
+        spawnRate = Random.Range(5 * Time.deltaTime, 10 * Time.deltaTime);
     }
 
     void SpawnTest()
