@@ -18,13 +18,6 @@ public class Spawner : MonoBehaviour
         InvokeRepeating("SpawnTest", startSpawnAt, spawnRate);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     void SpawnTest()
     {
         // later include methods to make spawnrate decrease over time.time

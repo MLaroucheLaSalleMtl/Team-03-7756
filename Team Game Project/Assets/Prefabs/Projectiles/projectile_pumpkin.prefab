@@ -93,6 +93,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2e3bdbbc10b61c34ebfada36ffcc8451,
         type: 3}
+    - target: {fileID: 6060814837693422871, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2583198951161150644, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
         type: 3}
       propertyPath: m_AutoConfigureDistance

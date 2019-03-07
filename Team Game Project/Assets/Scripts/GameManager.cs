@@ -8,12 +8,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text pointText;
     private int totalPoints;
     [SerializeField] private Text timerText;
-    [SerializeField] private float timerCountDown = 120.0f;
+    private float timerCountDown = 90.0f;
 
     public void Update()
     {
         timerText.text = (timerCountDown - Time.deltaTime).ToString();
-        pointText.text = "SCORE: 0000" + totalPoints.ToString("D2");
+        pointText.text = "SCORE: " + totalPoints.ToString("D4");
 
         if(timerCountDown <= 0.0f)
         {

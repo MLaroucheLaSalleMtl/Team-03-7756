@@ -31,11 +31,13 @@ public class EnemyBehaviour : MonoBehaviour
         if (col.gameObject.tag == "Projectile")
         {
             TakeDamage();
+            Destroy(col.gameObject);
         }
     }
 
     private void TakeDamage() //Would make more sense to put damage multiplier to projectiles instead... to modify
     {
+        Debug.Log("Damage Taken!");
         healthPoints -= 50;
         if (healthPoints <= 0)
         {

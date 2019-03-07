@@ -36,7 +36,6 @@ public class ClickAndLaunchObject : MonoBehaviour
         if (GetComponent<SpringJoint2D>().breakForce >= 50000.0f)
         {
             GetComponent<SpringJoint2D>().enabled = false;
-            this.enabled = false;
         }
     }
 }
