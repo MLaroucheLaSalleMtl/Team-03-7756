@@ -10,10 +10,14 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private GameObject prefabLoot;
     [SerializeField] private int healthPoints = 100;
     private GameManager gameManager;
+    
+
 
     public void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+
+        target = GameObject.FindWithTag("Character");
 
         Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }

@@ -16,5 +16,16 @@ public class FollowMouse : MonoBehaviour
         }
         var vel = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, vel);
+
+        Debug.Log(playerPosition.x - transform.position.x);
+
+        if (playerPosition.x - transform.position.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }
