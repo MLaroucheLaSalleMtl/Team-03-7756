@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnRate = Random.Range(5f, 25f);
+        spawnRate = Random.Range(5f, 10f);
         InvokeRepeating("SpawnTest", startSpawnAt, spawnRate);
     }
 

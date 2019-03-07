@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text pointText;
     private int totalPoints;
     [SerializeField] private Text timerText;
-    private float timerCountDown = 20.0f;
+    private float timerCountDown = 90.0f;
 
     [SerializeField] private GameObject endGame;
 
