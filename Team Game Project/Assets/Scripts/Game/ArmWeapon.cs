@@ -30,7 +30,7 @@ public class ArmWeapon : MonoBehaviour
                 col.gameObject.GetComponent<SpringJoint2D>().enabled = true;
                 col.gameObject.GetComponent<SpringJoint2D>().connectedBody = ballistaAnchor;
 
-                //Disable gravity on projectile
+                //Disable kinematics on projectile
                 col.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
 
                 //Position projectile at Loading Position

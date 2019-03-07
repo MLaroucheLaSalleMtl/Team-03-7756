@@ -18,6 +18,8 @@ public class GrowCrop : MonoBehaviour
 
     public void InstantiateProjectile(GameObject projectile)
     {
-
+        Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+        projectile.GetComponent<Animation>().Play("grow");
+        projectile.GetComponent<Animation>().PlayQueued("done", QueueMode.CompleteOthers);
     }
 }
