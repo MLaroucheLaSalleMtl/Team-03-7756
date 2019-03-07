@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4118188513823581615}
   - component: {fileID: 8092949567448320507}
   - component: {fileID: 6068582815160158686}
-  - component: {fileID: 4501770577712801461}
+  - component: {fileID: 5952816494147913431}
   m_Layer: 0
   m_Name: seeds_test
-  m_TagString: Untagged
+  m_TagString: Seed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4501770577712801461
+--- !u!114 &5952816494147913431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,6 +128,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6854509512931853114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb512f5b4a6dd104c9e7a6109ce76f60, type: 3}
+  m_Script: {fileID: 11500000, guid: ab3f399af06cbea49a354158bdb39c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
