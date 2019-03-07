@@ -12,7 +12,12 @@ public class GrowCrop : MonoBehaviour
         {
             Debug.Log("Collided!");
             Destroy(col.gameObject);
-            Instantiate(prefabProjectile, transform.position, transform.rotation);
+            InstantiateProjectile(prefabProjectile);
         }
+    }
+
+    public void InstantiateProjectile(GameObject projectile)
+    {
+
     }
 }

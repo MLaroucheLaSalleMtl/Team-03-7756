@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: projectile_pumpkin
       objectReference: {fileID: 0}
+    - target: {fileID: 6060814837693422868, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 6060814837693422869, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,10 +98,6 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6060814837693422868, guid: 37eefecd1ca81e84b9e78a7cc0a138a0,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.13
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1112991407804279950, guid: 37eefecd1ca81e84b9e78a7cc0a138a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37eefecd1ca81e84b9e78a7cc0a138a0, type: 3}

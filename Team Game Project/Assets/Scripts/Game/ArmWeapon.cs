@@ -8,6 +8,15 @@ public class ArmWeapon : MonoBehaviour
     [SerializeField] private GameObject loadPosition;
     private bool isArmed = false;
 
+    public void Update()
+    {
+        if(isArmed)
+        {
+            //8: Weapon, 10: Projectile
+            Physics2D.IgnoreLayerCollision(8, 10, true);
+        }
+    }
+
     public void OnCollisionEnter2D(Collision2D col)
     {
         if(!isArmed)
@@ -30,6 +39,4 @@ public class ArmWeapon : MonoBehaviour
             }
         }
     }
-
-
 }
