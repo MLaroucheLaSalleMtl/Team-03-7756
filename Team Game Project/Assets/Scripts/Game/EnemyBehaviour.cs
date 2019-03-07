@@ -14,6 +14,8 @@ public class EnemyBehaviour : MonoBehaviour
     public void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+
+        Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     public void Update()
