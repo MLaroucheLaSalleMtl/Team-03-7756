@@ -10,27 +10,27 @@ public class ArmWeapon : MonoBehaviour
 
     public void Update()
     {
-        if(isArmed)
-        {
-            //8: Weapon, 10: Projectile
-            Physics2D.IgnoreLayerCollision(8, 10, true);
-        }
+        //if(isArmed)
+        //{
+        //    //8: Weapon, 10: Projectile
+        //    Physics2D.IgnoreLayerCollision(8, 10, true);
+        //}
     }
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        if(!isArmed)
+        //if(!isArmed)
         {
             if (col.gameObject.tag == "Projectile")
             {
-                isArmed = true;
+                //isArmed = true;
                 Debug.Log("Collided!");
 
                 //Activate the Spring Joint 2D on projectile and attach it to the anchor
                 col.gameObject.GetComponent<SpringJoint2D>().enabled = true;
                 col.gameObject.GetComponent<SpringJoint2D>().connectedBody = ballistaAnchor;
 
-                //Disable gravity on projectile
+                //Disable kinematics on projectile
                 col.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
 
                 //Position projectile at Loading Position

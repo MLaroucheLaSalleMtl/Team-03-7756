@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickDrag : MonoBehaviour
-{
-    private Vector3 screenPoint;
-    private Vector3 offset;
+//Source: https://www.youtube.com/watch?v=QM8M0RainRI
 
+public class ClickAndLaunchObject : MonoBehaviour
+{
     private float releaseDelay = 0.1f;
     private bool isBeingDragged = false;
 
     private void Update()
     {
-        if (isBeingDragged == true)
+        if (isBeingDragged)
         {
-            GetComponent<Rigidbody2D>().position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            BroadcastMessage("OnMouseDrag");
         }
     }
 
@@ -28,18 +27,15 @@ public class ClickDrag : MonoBehaviour
     {
         isBeingDragged = false;
         GetComponent<Rigidbody2D>().isKinematic = false;
-
-        StartCoroutine(
-            
-            Release()
-            
-            ); 
+        StartCoroutine(Release()); 
     }
 
-    IEnumerator Release ()
+    IEnumerator Release()
     {
         yield return new WaitForSeconds(releaseDelay);
-
-        GetComponent<SpringJoint2D>().enabled = false;
+        if (GetComponent<SpringJoint2D>().breakForce >= 50000.0f)
+        {
+            GetComponent<SpringJoint2D>().enabled = false;
+        }
     }
 }
