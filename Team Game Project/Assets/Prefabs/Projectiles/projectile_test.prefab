@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6060814837693422870}
   - component: {fileID: 6060814837693422871}
   - component: {fileID: 6060814837693422868}
-  - component: {fileID: 684565312}
+  - component: {fileID: 2583198951161150644}
   - component: {fileID: 4224222148796977649}
   m_Layer: 10
   m_Name: projectile_test
@@ -120,18 +120,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3075199
---- !u!114 &684565312
-MonoBehaviour:
+--- !u!231 &2583198951161150644
+SpringJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6060814837693422952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72d7fd208c2e19142800820def5cc877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 4.5591345
+  m_DampingRatio: 0
+  m_Frequency: 1.5
 --- !u!114 &4224222148796977649
 MonoBehaviour:
   m_ObjectHideFlags: 0
