@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6060814837693422871}
   - component: {fileID: 6060814837693422868}
   - component: {fileID: 2583198951161150644}
+  - component: {fileID: 1112991407804279950}
   - component: {fileID: 4224222148796977649}
   m_Layer: 10
   m_Name: projectile_test
@@ -99,7 +100,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 38bbe723249884d499d753cb02e32232, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -113,7 +114,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 6060814837693422952}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 38bbe723249884d499d753cb02e32232, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -140,6 +141,19 @@ SpringJoint2D:
   m_Distance: 4.5591345
   m_DampingRatio: 0
   m_Frequency: 1.5
+--- !u!114 &1112991407804279950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060814837693422952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb512f5b4a6dd104c9e7a6109ce76f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 6060814837693422871}
 --- !u!114 &4224222148796977649
 MonoBehaviour:
   m_ObjectHideFlags: 0
