@@ -8,12 +8,12 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] GameObject target;
     [SerializeField] private float movementSpeed = 0.5f;
     [SerializeField] private GameObject prefabLoot;
-    private int healthPoints = 100;
+    [SerializeField] private int healthPoints = 100;
     private GameManager gameManager;
 
     public void Start()
     {
-        gameManager = GetComponent<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     public void Update()
@@ -39,12 +39,13 @@ public class EnemyBehaviour : MonoBehaviour
     {
         Debug.Log("Damage Taken!");
         healthPoints -= 50;
+
         if (healthPoints <= 0)
         {
             gameManager.AddPoints();
             Instantiate(prefabLoot, gameObject.transform.position, gameObject.transform.rotation);
 
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
             Destroy(gameObject, 1.0f);
         }
     }

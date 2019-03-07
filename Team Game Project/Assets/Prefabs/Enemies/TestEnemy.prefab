@@ -117,7 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   movementSpeed: 0.5
-  prefabLoot: {fileID: 0}
+  prefabLoot: {fileID: 8826140832128967661, guid: a4d62bc94881d324cb3454fe881c70bf,
+    type: 3}
+  healthPoints: 100
 --- !u!60 &6669333792190360162
 PolygonCollider2D:
   m_ObjectHideFlags: 0
