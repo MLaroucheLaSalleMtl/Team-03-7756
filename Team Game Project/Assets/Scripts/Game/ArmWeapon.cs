@@ -38,5 +38,6 @@ public class ArmWeapon : MonoBehaviour
                 col.gameObject.transform.rotation = loadPosition.transform.rotation;
             }
         }
+        if ()
     }
 }

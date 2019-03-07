@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 245341784926838578}
   - component: {fileID: 245341784926838579}
   - component: {fileID: 6669333792190360162}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TestEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245341784926838576}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.27, y: -0.55, z: 0.12695312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -116,7 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 2
+  movementSpeed: 0.5
+  prefabLoot: {fileID: 0}
 --- !u!60 &6669333792190360162
 PolygonCollider2D:
   m_ObjectHideFlags: 0
