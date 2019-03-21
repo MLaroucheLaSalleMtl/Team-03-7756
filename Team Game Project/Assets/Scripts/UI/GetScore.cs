@@ -8,9 +8,13 @@ public class GetScore : MonoBehaviour
     private GameManager gameManager;
     [SerializeField] private Text highestScore;
 
-    public void Start()
+    public void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+    }
+
+    public void Start()
+    {
         PlayerPrefs.GetInt("HighestScore");
 
         //DISPLAY SCOREBOARD
