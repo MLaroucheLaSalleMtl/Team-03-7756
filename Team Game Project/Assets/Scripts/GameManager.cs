@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int highestScore;
     [SerializeField] private Text timerText;
     private float timerCountDown = 90.0f;
+    private EnemyBehaviour enemy;
 
     [SerializeField] private GameObject endGame;
 
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void AddPoints()
     {
-        totalPoints += 25;
+        totalPoints += enemy.enemyPoints;
     }
 
     public void SaveScore()
@@ -56,11 +57,11 @@ public class GameManager : MonoBehaviour
 
     public void EnterName()
     {
-        if (Input.GetKeyDown("Enter"))
-        {
-            PlayerPrefs.SetString("PlayerName", playerName.text);
-            PlayerPrefs.SetInt("PlayerScore", totalPoints);
-            PlayerPrefs.Save();
-        }
+        //if (Input.GetKeyDown("Enter"))
+        //{
+        //    PlayerPrefs.SetString("PlayerName", playerName.text);
+        //    PlayerPrefs.SetInt("PlayerScore", totalPoints);
+        //    PlayerPrefs.Save();
+        //}
     }
 }

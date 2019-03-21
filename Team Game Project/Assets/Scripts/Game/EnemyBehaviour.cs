@@ -8,6 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float movementSpeed = 0.5f;
     [SerializeField] private GameObject prefabLoot;
     [SerializeField] private int healthPoints = 70;
+    public int enemyPoints;
     private GameManager gameManager;
 
     public void Start()
