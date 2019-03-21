@@ -7,13 +7,19 @@ using UnityEngine;
 public class ClickAndLaunchObject : MonoBehaviour
 {
     private float releaseDelay = 0.1f;
-    private bool isBeingDragged = false;
+    private bool isBeingDragged = true;
+    [SerializeField] private ArmWeapon weapon;
+
+    private void Awake()
+    {
+        GetComponent<SpringJoint2D>();
+    }
 
     private void Update()
     {
-        if (isBeingDragged)
+        if (!isBeingDragged)
         {
-            BroadcastMessage("OnMouseDrag");
+            StartCoroutine(Release());
         }
     }
 
@@ -26,16 +32,15 @@ public class ClickAndLaunchObject : MonoBehaviour
     public void OnMouseUp()
     {
         isBeingDragged = false;
-        GetComponent<Rigidbody2D>().isKinematic = false;
-        StartCoroutine(Release()); 
+        //GetComponent<Rigidbody2D>().isKinematic = false;
+        //StartCoroutine(Release()); 
     }
 
     IEnumerator Release()
     {
         yield return new WaitForSeconds(releaseDelay);
-        if (GetComponent<SpringJoint2D>().breakForce >= 50000.0f)
-        {
-            GetComponent<SpringJoint2D>().enabled = false;
-        }
+        GetComponent<SpringJoint2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = true;
+        weapon.isArmed = false;
     }
 }
