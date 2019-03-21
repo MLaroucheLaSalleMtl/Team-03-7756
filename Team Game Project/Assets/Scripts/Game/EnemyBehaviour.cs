@@ -5,11 +5,9 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject target;
-    [SerializeField] private float movementSpeed = 0.5f;
     [SerializeField] private GameObject prefabLoot;
-    [SerializeField] private int healthPoints = 70;
-    public int enemyPoints;
     private GameManager gameManager;
+    Enemy enemy = new Enemy();
 
     public void Start()
     {
@@ -23,22 +21,22 @@ public class EnemyBehaviour : MonoBehaviour
         //Increase movement speed at score threshold
         if (gameManager.totalPoints == 100)
         {
-            movementSpeed = 1.0f;
+            enemy.MoveSpeed = 1.0f;
         }
         if (gameManager.totalPoints == 200)
         {
-            movementSpeed = 1.5f;
+            enemy.MoveSpeed = 1.5f;
         }
         if (gameManager.totalPoints == 300)
         {
-            movementSpeed = 2.0f;
+            enemy.MoveSpeed = 2.0f;
         }
         
     }
 
     public void Move()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, Time.deltaTime * movementSpeed);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, Time.deltaTime * enemy.MoveSpeed);
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -53,9 +51,9 @@ public class EnemyBehaviour : MonoBehaviour
     private void TakeDamage() //Would make more sense to put damage multiplier to projectiles instead... to modify
     {
         Debug.Log("Damage Taken!");
-        healthPoints -= (int)Random.Range(60f, 100f);
+        enemy.HealthPoints -= (int)Random.Range(60f, 100f);
 
-        if (healthPoints <= 0)
+        if (enemy.HealthPoints <= 0)
         {
             gameManager.AddPoints();
             Instantiate(prefabLoot, gameObject.transform.position, gameObject.transform.rotation);

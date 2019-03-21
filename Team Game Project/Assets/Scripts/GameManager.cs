@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int highestScore;
     [SerializeField] private Text timerText;
     private float timerCountDown = 90.0f;
-    private EnemyBehaviour enemy;
+    private Enemy enemy;
     [SerializeField] private GameObject endGame;
 
     //ScoreBoard System
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     //ScoreBoard System
     public void AddPoints()
     {
-        totalPoints += enemy.enemyPoints;
+        totalPoints += enemy.EnemyPoints;
     }
 
     public void SaveScore()
