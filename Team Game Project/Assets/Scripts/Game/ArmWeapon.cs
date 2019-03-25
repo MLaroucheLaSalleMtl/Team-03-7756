@@ -15,30 +15,38 @@ public class ArmWeapon : MonoBehaviour
             //8: Weapon, 10: Projectile
             Physics2D.IgnoreLayerCollision(8, 10, true);
         }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(8, 10, false);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        //if(!isArmed)
+
+        if (col.gameObject.tag == "Projectile" && !isArmed)
         {
-            if (col.gameObject.tag == "Projectile")
-            {
-                //isArmed = true;
-                Debug.Log("Collided!");
-                isArmed = true;
+           //The weapon is armed
+            Debug.Log("Collided!");
+            isArmed = true;
 
-                //Activate the Spring Joint 2D on projectile and attach it to the anchor
-                col.gameObject.GetComponent<SpringJoint2D>().enabled = true;
-                col.gameObject.GetComponent<SpringJoint2D>().connectedBody = ballistaAnchor;
+            //Activate the Spring Joint 2D on projectile and attach it to the anchor
+            col.gameObject.GetComponent<SpringJoint2D>().enabled = true;
+            col.gameObject.GetComponent<SpringJoint2D>().connectedBody = ballistaAnchor;
 
-                //Disable kinematics on projectile
-                col.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                col.gameObject.GetComponent<Rigidbody2D>().simulated = false;
 
-                //Position projectile at Loading Position
-                //col.gameObject.transform.position = loadPosition.transform.position;
-                //col.gameObject.transform.rotation = loadPosition.transform.rotation;
-            }
+            //Disable kinematics on projectile
+            //col.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+            //col.gameObject.GetComponent<Rigidbody2D>().drag = 1000f;
+            //col.gameObject.GetComponent<Rigidbody2D>().angularDrag = 1000f;
+            //col.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+
+
+            //Position projectile at Loading Position
+            col.gameObject.transform.position = loadPosition.transform.position;
+            col.gameObject.transform.rotation = loadPosition.transform.rotation;
+
         }
+
     }
 }
