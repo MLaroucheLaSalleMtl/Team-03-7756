@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
     {
         totalPoints += enemy.EnemyPoints;
     }
-
     public void SaveScore()
     {
                 //GetScore
