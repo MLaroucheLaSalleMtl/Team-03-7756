@@ -1891,16 +1891,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 759413269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca6841a97d8a3fd47a2668e8df62f512, type: 3}
+  m_Script: {fileID: 11500000, guid: fb512f5b4a6dd104c9e7a6109ce76f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStretch: 3
-  spring: {fileID: 0}
-  catapult: {fileID: 0}
-  maxStretchSqr: 0
-  circleRadius: 0
-  clickedOn: 0
-  prevVelocity: {x: 0, y: 0}
 --- !u!1 &784372392
 GameObject:
   m_ObjectHideFlags: 0
