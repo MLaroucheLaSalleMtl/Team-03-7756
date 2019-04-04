@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SetFullScreen : MonoBehaviour {
-   
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;

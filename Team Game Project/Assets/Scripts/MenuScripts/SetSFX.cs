@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Slider))]
 
-public class SFXSlider : MonoBehaviour
+public class SetSFX : MonoBehaviour
 {
 
     [SerializeField] private AudioMixer audMixer;
