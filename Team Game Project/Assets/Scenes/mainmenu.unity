@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelMenu: {fileID: 2067279034}
-  panelOptions: {fileID: 0}
+  panelOptions: {fileID: 7621813214887935220}
   savedScoreList: {fileID: 0}
 --- !u!114 &1075802556
 MonoBehaviour:
@@ -2563,6 +2563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebd37775b7d97e4d9c13d47dd63049c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 7621813214640067693}
 --- !u!222 &7621813214640067695
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2637,7 +2638,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -3565,7 +3566,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -3663,7 +3664,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -3881,7 +3882,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -4064,7 +4065,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -4370,7 +4371,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: b3d0c0decb8e83443bbecde2be3ff00f, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -4872,7 +4873,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7621813215815970131}
+      - m_Target: {fileID: 0}
         m_MethodName: SVolume
         m_Mode: 0
         m_Arguments:
@@ -4908,7 +4909,25 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -15}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7621813215815970131
+--- !u!1 &7621813215815970142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7621813215815970129}
+  - component: {fileID: 7621813215815970128}
+  - component: {fileID: 7621813215815970143}
+  m_Layer: 5
+  m_Name: SFXSlider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7621813215815970143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4920,24 +4939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 249432d3a1862994eb2fe258209a0274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7621813215815970142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7621813215815970129}
-  - component: {fileID: 7621813215815970128}
-  - component: {fileID: 7621813215815970131}
-  m_Layer: 5
-  m_Name: SFXSlider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  audMixer: {fileID: 0}
+  names: 
 --- !u!114 &7621813215853590432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5674,6 +5677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a341835652f63e143bacb5e330c13175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audMixer: {fileID: 0}
+  names: 
 --- !u!224 &7621813216299649296
 RectTransform:
   m_ObjectHideFlags: 0
