@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: faed51fe6b31a8549bed8d804e0ce8cc
+guid: 32149a072b7feca439de251aa9bd49d1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: floor
+    21300000: enemy2
+    21300002: enemy3
+    21300004: pixil-frame-0_0
+    21300006: enemy4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -107,21 +110,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floor
+      name: enemy2
       rect:
         serializedVersion: 2
-        x: 46
-        y: 235
-        width: 819
-        height: 135
+        x: 420
+        y: 786
+        width: 141
+        height: 156
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 29, y: 21, z: 32, w: 28}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f8fbc401476d74186f89a2df02d3fd
+      spriteID: b9c642c3db751d8439d2ee3bfe13f21e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 557
+        width: 125
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570774d67d71d634cb6099e173d6eee0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-0_0
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 360
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98efc2197018da94992f65b2acc49146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 168
+        width: 103
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabc6edc80115f147b5573b50f423ef4
       vertices: []
       indices: 
       edges: []
@@ -129,7 +192,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 044d68b136ade5b4bbf4e264ff1e6d94
+    spriteID: a68ebe98ca81f1844b4869088a1aeaf9
     vertices: []
     indices: 
     edges: []
