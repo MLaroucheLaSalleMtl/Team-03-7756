@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityStandardAssets.Characters.FirstPerson;
 
 public class TogglePanel : MonoBehaviour
 {
@@ -32,8 +31,7 @@ public class TogglePanel : MonoBehaviour
         if (panels[2].gameObject.activeInHierarchy == false) 
         {
             Time.timeScale = 0;
-
-            playerObj.GetComponent<FirstPersonController>().enabled = false;
+            
 
            // wep.GetComponent<GunFire>().enabled = false;
 
@@ -50,7 +48,7 @@ public class TogglePanel : MonoBehaviour
         {
             Time.timeScale = 1;
 
-            playerObj.GetComponent<FirstPersonController>().enabled = true;
+            
 
             //wep.GetComponent<GunFire>().enabled = true;
 
