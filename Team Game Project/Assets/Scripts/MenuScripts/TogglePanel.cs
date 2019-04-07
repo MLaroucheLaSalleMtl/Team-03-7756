@@ -9,8 +9,8 @@ public class TogglePanel : MonoBehaviour
     [SerializeField] private GameObject[] panels;
     [SerializeField] private Selectable[] defaultOptions;
     public GameObject gameOverPanel;
-    [SerializeField] private GameObject playerObj;
-    [SerializeField] private GameObject[] gunObj;
+    //[SerializeField] private GameObject playerObj;
+    //[SerializeField] private GameObject[] gunObj;
 
     public void PanelToggle(int pos)
     {

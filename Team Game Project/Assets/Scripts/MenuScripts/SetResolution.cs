@@ -9,10 +9,16 @@ public class SetResolution : MonoBehaviour
     public Dropdown resolutionDropdown;
 
     Resolution[] resolutions;
-    
+
+    [SerializeField] private string names;
+
     // Use this for initialization
     void Start()
     {
+        
+        int val = PlayerPrefs.GetInt(names);
+        resolutionDropdown.value = val;
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -42,5 +48,11 @@ public class SetResolution : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+    
+       
+
+
+       
+    
 
 }
