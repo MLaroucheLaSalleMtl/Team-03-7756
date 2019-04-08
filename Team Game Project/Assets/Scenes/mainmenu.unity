@@ -429,8 +429,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075802554}
-        m_MethodName: PanelManagerM
+      - m_Target: {fileID: 1075802557}
+        m_MethodName: PanelToggle
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -729,6 +729,7 @@ GameObject:
   - component: {fileID: 1075802551}
   - component: {fileID: 1075802554}
   - component: {fileID: 1075802555}
+  - component: {fileID: 1075802557}
   - component: {fileID: 1075802556}
   m_Layer: 0
   m_Name: EventSystem
@@ -825,9 +826,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075802550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c95edafbe19e98b4eb11e100bb1b61a7, type: 3}
+  m_Script: {fileID: 11500000, guid: f540b19731fb8014dbf16a65d5511f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1075802557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075802550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b958edfc1290f459d4cba6983ae65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 2067279034}
+  - {fileID: 7621813214887935220}
+  - {fileID: 7621813214813985251}
+  defaultOptions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameOverPanel: {fileID: 0}
 --- !u!1 &1289728183
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,8 +929,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075802554}
-        m_MethodName: PanelManagerM
+      - m_Target: {fileID: 1075802557}
+        m_MethodName: PanelToggle
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1137,13 +1159,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075802555}
-        m_MethodName: ExitGame
-        m_Mode: 1
+      - m_Target: {fileID: 1075802557}
+        m_MethodName: PanelToggle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1816,7 +1838,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1075802556}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -3688,7 +3710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3696,7 +3718,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -4023,7 +4045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4031,7 +4053,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -5290,7 +5312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5298,7 +5320,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3881cf7f59def849b57f9757e697bd0, type: 3}
+    m_Font: {fileID: 12800000, guid: 82fdb3745b9c8fb41aa994ff307a15a0, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -6044,7 +6066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb94371198bd5544a798c4194654f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: 
+  names: GraphicsDrop
+  dropdownMenu: {fileID: 7621813216299649299}
 --- !u!222 &7621813216299649301
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6112,7 +6135,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1075802557}
         m_MethodName: PanelToggle
         m_Mode: 3
         m_Arguments:

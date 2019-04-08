@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
@@ -9,26 +10,30 @@ using UnityEngine.UI;
 public class SetGraphics : MonoBehaviour
 {
 
-    [SerializeField] private string names;
+    private string names = "SetGraphics";
 
-    public Dropdown dropdownMenu;
-    int val;
+    private Dropdown dropdownMenu;
 
+
+    private void Awake()
+    {
+        dropdownMenu = GetComponent<Dropdown>();
+
+        dropdownMenu.onValueChanged.AddListener(new UnityAction<int>(index =>
+       {
+           PlayerPrefs.SetInt(names, dropdownMenu.value);
+           PlayerPrefs.Save();
+       }));
+    }
     void Start()
     {
-        //dropdownMenu = GetComponent<Dropdown>();
-        val = PlayerPrefs.GetInt(names);
-        dropdownMenu.value = val;
-
+        dropdownMenu.value = PlayerPrefs.GetInt(names, 0);
     }
+
 
     public void SetQuality(int quality)
     {
-        PlayerPrefs.SetInt(names, val);
-        PlayerPrefs.Save();
         QualitySettings.SetQualityLevel(quality);
-
-        
     }
     
 }
