@@ -8,22 +8,27 @@ using UnityEngine.UI;
 
 public class SetGraphics : MonoBehaviour
 {
-    
+
     [SerializeField] private string names;
 
-
-    public void SetQuality(int quality)
-    {
-        QualitySettings.SetQualityLevel(quality);
-    }
-
-
+    public Dropdown dropdownMenu;
+    int val;
 
     void Start()
     {
-        Dropdown dropdownMenu = GetComponent<Dropdown>();
-        int val = PlayerPrefs.GetInt(names);
+        //dropdownMenu = GetComponent<Dropdown>();
+        val = PlayerPrefs.GetInt(names);
         dropdownMenu.value = val;
 
     }
+
+    public void SetQuality(int quality)
+    {
+        PlayerPrefs.SetInt(names, val);
+        PlayerPrefs.Save();
+        QualitySettings.SetQualityLevel(quality);
+
+        
+    }
+    
 }
