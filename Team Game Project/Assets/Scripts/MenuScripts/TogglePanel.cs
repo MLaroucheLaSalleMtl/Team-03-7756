@@ -9,8 +9,8 @@ public class TogglePanel : MonoBehaviour
     [SerializeField] private GameObject[] panels;
     [SerializeField] private Selectable[] defaultOptions;
     public GameObject gameOverPanel;
-    [SerializeField] private GameObject playerObj;
-    [SerializeField] private GameObject[] gunObj;
+    //[SerializeField] private GameObject playerObj;
+    //[SerializeField] private GameObject[] gunObj;
 
     public void PanelToggle(int pos)
     {
@@ -70,7 +70,7 @@ public class TogglePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameOverPanel.gameObject.activeInHierarchy == false)
+        //if (gameOverPanel.gameObject.activeInHierarchy == false)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
