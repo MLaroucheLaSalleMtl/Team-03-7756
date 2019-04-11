@@ -110,12 +110,12 @@ TextureImporter:
       name: FrameW6_0
       rect:
         serializedVersion: 2
-        x: 466
+        x: 468
         y: 479
-        width: 126
-        height: 135
+        width: 174
+        height: 134
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
