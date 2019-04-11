@@ -8,7 +8,7 @@ TextureImporter:
     21300006: enemy1
     21300008: floor1
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,7 +116,7 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 769
-        width: 102
+        width: 110
         height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

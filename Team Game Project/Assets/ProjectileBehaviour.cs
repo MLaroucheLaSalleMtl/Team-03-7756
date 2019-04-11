@@ -44,7 +44,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if(isBeingDragged)
         {
-            DragProjectile();
+            OnMouseDrag();
         }
     }
 
@@ -73,7 +73,7 @@ public class ProjectileBehaviour : MonoBehaviour
     /// <summary>
     /// The behaviour of the projectile while being dragged
     /// </summary>
-    public void DragProjectile()
+    public void OnMouseDrag()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float currentDragDistance = Vector2.Distance(mousePosition, anchor.position);
