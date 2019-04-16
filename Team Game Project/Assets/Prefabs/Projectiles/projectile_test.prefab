@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 6060814837693422871}
   - component: {fileID: 6060814837693422868}
   - component: {fileID: 2583198951161150644}
-  - component: {fileID: 1112991407804279950}
-  - component: {fileID: 4224222148796977649}
   m_Layer: 10
   m_Name: projectile_test
   m_TagString: Projectile
@@ -128,7 +126,7 @@ SpringJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6060814837693422952}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
@@ -141,27 +139,3 @@ SpringJoint2D:
   m_Distance: 4.5591345
   m_DampingRatio: 0
   m_Frequency: 1.5
---- !u!114 &1112991407804279950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6060814837693422952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb512f5b4a6dd104c9e7a6109ce76f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4224222148796977649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6060814837693422952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3f399af06cbea49a354158bdb39c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

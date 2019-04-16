@@ -7,7 +7,6 @@ public class ProjectileBehaviour : MonoBehaviour
     //PROPERTIES
     private Rigidbody2D projectile;
     private SpringJoint2D projectileSpringJoint;
-
     private Rigidbody2D anchor;
 
     private bool isBeingDragged;
@@ -44,7 +43,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if(isBeingDragged)
         {
-            OnMouseDrag();
+            Dragging();
         }
     }
 
@@ -73,7 +72,7 @@ public class ProjectileBehaviour : MonoBehaviour
     /// <summary>
     /// The behaviour of the projectile while being dragged
     /// </summary>
-    public void OnMouseDrag()
+    public void Dragging()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float currentDragDistance = Vector2.Distance(mousePosition, anchor.position);
