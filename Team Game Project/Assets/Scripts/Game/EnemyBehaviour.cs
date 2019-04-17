@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    private GameManager gameManager;
+
     [SerializeField] GameObject target;
     [SerializeField] private GameObject prefabLoot;
-    private GameManager gameManager;
-    Enemy enemy = new Enemy();
+    private Enemy enemy;
 
-    public void Start()
+    public void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
     }
@@ -17,7 +18,7 @@ public class EnemyBehaviour : MonoBehaviour
     public void Update()
     {
         Move();
-        
+
         //Increase movement speed at score threshold
         if (gameManager.totalPoints == 100)
         {
@@ -31,7 +32,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             enemy.MoveSpeed = 2.0f;
         }
-        
     }
 
     public void Move()
