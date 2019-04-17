@@ -13,6 +13,8 @@ public class ProjectileBehaviour : MonoBehaviour
     private float releaseDelay;
     private float maxDragDistance = 1.5f;
 
+    public ParticleSystem splat;
+
     private LineRenderer lineRenderer;
     private TrailRenderer trail;
 
@@ -41,10 +43,27 @@ public class ProjectileBehaviour : MonoBehaviour
     /// </summary>
     public void Update()
     {
-        if(isBeingDragged)
+        if (isBeingDragged)
         {
             Dragging();
         }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        int timesCollided = 0;
+
+        if(timesCollided >= 0 && projectileSpringJoint.enabled == false && collision.gameObject.tag != "IgnoreWall")
+           {
+
+            Instantiate(splat, transform.position, transform.rotation);
+            Destroy(gameObject);
+        } else
+        {
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+            timesCollided++;
+        }
+
     }
 
     /// <summary>
