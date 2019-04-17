@@ -70,7 +70,7 @@ public class TogglePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (gameOverPanel.gameObject.activeInHierarchy == false)
+        if (gameOverPanel.gameObject.activeInHierarchy == false)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

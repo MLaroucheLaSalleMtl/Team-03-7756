@@ -49,18 +49,20 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
 
+    public int timesCollided = 0;
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        int timesCollided = 0;
+        
 
-        if(timesCollided >= 0 && projectileSpringJoint.enabled == false && collision.gameObject.tag != "IgnoreWall")
+        if(timesCollided >= 1 && projectileSpringJoint.enabled == false )//&& collision.gameObject.tag != "IgnoreWall")
            {
 
             Instantiate(splat, transform.position, transform.rotation);
             Destroy(gameObject);
         } else
         {
-            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+            //Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
             timesCollided++;
         }
 
