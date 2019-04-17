@@ -43,6 +43,11 @@ public class ProjectileBehaviour : MonoBehaviour
     /// </summary>
     public void Update()
     {
+        if (gameObject.transform.position.y <= -5)
+        {
+            Destroy(gameObject);
+        }
+
         if (isBeingDragged)
         {
             Dragging();
