@@ -8,6 +8,7 @@ TagManager:
   - Seed
   - Weapon
   - IgnoreWall
+  - Loading Position
   layers:
   - Default
   - TransparentFX
