@@ -53,3 +53,6 @@ TagManager:
   - name: Foreground
     uniqueID: 242245091
     locked: 0
+  - name: panel
+    uniqueID: 178934597
+    locked: 0
