@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - IgnoreWall
   - Loading Position
+  - Planteable Area
   layers:
   - Default
   - TransparentFX
