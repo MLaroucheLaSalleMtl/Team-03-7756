@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text pointText;
     public int highestScore;
     [SerializeField] private Text timerText;
+
     private float timerCountDown = 00.0f;
+
     private Enemy enemy;
     [SerializeField] private GameObject endGame;
     public int numberOfEnemiesToSpawn;
@@ -44,15 +46,11 @@ public class GameManager : MonoBehaviour
 
         if (numberOfEnemiesToSpawn <= enemiesSpawned && enemiesSpawned <= numberOfEnemies && false)
         {
-            Time.timeScale = 0.0f;
-            //LEVEL OVER
-            //endGame.SetActive(true);
-
-            //assignpointsbasedontime
-            //totalPoints += 
-            //Keep track of score
             SaveScore();
         }
+
+
+        
     }
 
     //ScoreBoard System

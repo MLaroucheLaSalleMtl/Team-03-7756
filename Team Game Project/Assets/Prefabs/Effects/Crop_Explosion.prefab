@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8849827240404523120}
   - component: {fileID: 8849827240404523121}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Crop_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
 --- !u!199 &8849827240404523120
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

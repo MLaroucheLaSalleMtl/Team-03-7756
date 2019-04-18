@@ -50,7 +50,7 @@ public class EnemyBehaviour : MonoBehaviour
     public void Move()
     {
 
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, Time.deltaTime * moveSpeed);//enemy.MoveSpeed);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, Time.deltaTime * moveSpeed); //enemy.MoveSpeed);
     }
 
     public void OnCollisionEnter2D(Collision2D col)

@@ -58,19 +58,21 @@ public class ProjectileBehaviour : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        
-
-        if(timesCollided >= 1 && projectileSpringJoint.enabled == false )//&& collision.gameObject.tag != "IgnoreWall")
-           {
-
+        if(timesCollided >= 1 && projectileSpringJoint.enabled == false) //&& collision.gameObject.tag != "IgnoreWall")
+        {
             Instantiate(splat, transform.position, transform.rotation);
             Destroy(gameObject);
-        } else
+        }
+        else
         {
             //Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
             timesCollided++;
         }
 
+        if(gameObject.tag == "Loading Position")
+        {
+            projectileSpringJoint.connectedBody = gameObject.GetComponent<Rigidbody2D>();
+        }
     }
 
     /// <summary>
