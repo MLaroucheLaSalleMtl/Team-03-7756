@@ -10,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private GameObject prefabLoot;
 
     [SerializeField] private int enemyPoints = 25;
-    [SerializeField] private int healthPoints = 200;
+    [SerializeField] private int healthPoints = 90;
     [SerializeField] private float moveSpeed = 1.0f;
 
 
@@ -46,9 +46,9 @@ public class EnemyBehaviour : MonoBehaviour
             moveSpeed = 1.5f;
             //enemy.MoveSpeed = 2.0f;
         }
-        
 
-        if (gameObject.transform.position.x - target.transform.position.x < 5)
+        Debug.Log(gameObject.transform.position.x - target.transform.position.x);
+        if (gameObject.transform.position.x - target.transform.position.x < 12)
         {
             Attack();
             TakeDamage();

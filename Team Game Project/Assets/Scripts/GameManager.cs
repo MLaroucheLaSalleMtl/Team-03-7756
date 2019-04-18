@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public int enemiesSpawned;
 
 
-    public int levelNumber = 1;
+    public int levelNumber = 0;
 
     //ScoreBoard System
     public int totalPoints; //all the points that the player got
@@ -57,6 +57,15 @@ public class GameManager : MonoBehaviour
         pointText.text = "SCORE: " + totalPoints.ToString("D4");
         waveTx.text = levelNumber.ToString("00");
 
+        if (health > 0)
+        {
+            healthTx.text = "HEALTH: " + health.ToString("00");
+        }
+        else
+        {
+            healthTx.text = "HEALTH: " + 0;
+        }
+
         if (health <= 0)
         {
             endGame.SetActive(true);
@@ -79,7 +88,7 @@ public class GameManager : MonoBehaviour
     //ScoreBoard System
     public void AddPoints()
     {
-        totalPoints += enemy.EnemyPoints;
+        totalPoints += 25;
         health += Random.Range(1, 5);
     }
 
