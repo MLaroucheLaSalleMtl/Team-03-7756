@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crops:
-  - {fileID: 5956691825457556270, guid: fefa81b5913e053439177a2f85de1aad, type: 3}
+  - {fileID: 1189840406, guid: 4ac48e7021096c64288e20d868325aee, type: 3}
 --- !u!1001 &2692268875823243479
 PrefabInstance:
   m_ObjectHideFlags: 0
