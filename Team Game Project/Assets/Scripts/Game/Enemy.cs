@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private int enemyPoints;
     [SerializeField] private int healthPoints;

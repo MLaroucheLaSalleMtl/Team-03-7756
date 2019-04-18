@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text pointText;
     public int highestScore;
     [SerializeField] private Text timerText;
-    private float timerCountDown = 90.0f;
+    private float timerCountDown = 00.0f;
     private Enemy enemy;
     [SerializeField] private GameObject endGame;
+    public int numberOfEnemiesToSpawn;
+    public int numberOfEnemies;
+    public int enemiesSpawned;
+
+    public int levelNumber = 1;
 
     //ScoreBoard System
     public int totalPoints; //all the points that the player got
@@ -26,20 +31,25 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         endGame.SetActive(false);
+        
+        numberOfEnemiesToSpawn = levelNumber * 5;
+
     }
 
     public void Update()
     {
-        timerCountDown -= Time.deltaTime;
+        timerCountDown += Time.deltaTime;
         timerText.text = timerCountDown.ToString("0:00");
         pointText.text = "SCORE: " + totalPoints.ToString("D4");
 
-        if (timerCountDown <= 0.0f)
+        if (numberOfEnemiesToSpawn <= enemiesSpawned && enemiesSpawned <= numberOfEnemies && false)
         {
             Time.timeScale = 0.0f;
             //LEVEL OVER
-            endGame.SetActive(true);
+            //endGame.SetActive(true);
 
+            //assignpointsbasedontime
+            //totalPoints += 
             //Keep track of score
             SaveScore();
         }
@@ -48,7 +58,8 @@ public class GameManager : MonoBehaviour
     //ScoreBoard System
     public void AddPoints()
     {
-        totalPoints += enemy.EnemyPoints;
+        //totalPoints += enemy.EnemyPoints;
+       
     }
     public void SaveScore()
     {
