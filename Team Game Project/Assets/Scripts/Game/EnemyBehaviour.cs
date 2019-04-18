@@ -72,17 +72,17 @@ public class EnemyBehaviour : MonoBehaviour
             TakeDamage();
         }
     }
-
+    bool isDead = false;
     private void TakeDamage() //Would make more sense to put damage multiplier to projectiles instead... to modify
     {
         Debug.Log("Damage Taken!");
         //enemy.HealthPoints -= (int)Random.Range(60f, 100f);
         healthPoints -= (int)Random.Range(60f, 100f);
-        if (healthPoints <= 0)//enemy.HealthPoints <= 0)
+        if (healthPoints <= 0 && !isDead)//enemy.HealthPoints <= 0)
         {
             gameManager.AddPoints();
             Instantiate(prefabLoot, gameObject.transform.position, gameObject.transform.rotation);
-            
+            isDead = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
             Destroy(gameObject, 1.0f);
         }

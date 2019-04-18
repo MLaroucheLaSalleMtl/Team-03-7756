@@ -5,12 +5,14 @@ using UnityEngine;
 public class ArmWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
-
+    public GameObject load;
     private Animator animator;
 
     public void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
+        load = gameObject.GetComponent<GameObject>();
+        load.gameObject.tag = "Load Position";
     }
 
     public void OnMouseDown()
@@ -19,7 +21,7 @@ public class ArmWeapon : MonoBehaviour
         {
             Destroy(gameObject);
             // Instantiate projectile at loading position
-            Instantiate(projectile, new Vector3(-3, 1.25f, 0), Quaternion.Euler(0, 0, 0));
+            Instantiate(projectile, new Vector3(load.transform.position.x, load.transform.position.y), Quaternion.Euler(0, 0, 0));
         }
     }
 }

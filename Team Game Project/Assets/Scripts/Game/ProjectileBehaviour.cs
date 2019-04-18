@@ -102,6 +102,7 @@ public class ProjectileBehaviour : MonoBehaviour
     /// </summary>
     public void Dragging()
     {
+        projectile = GetComponent<Rigidbody2D>();
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float currentDragDistance = Vector2.Distance(mousePosition, anchor.position);
 
