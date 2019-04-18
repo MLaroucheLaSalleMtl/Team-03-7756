@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int highestScore;
     [SerializeField] private Text timerText;
 
-    public TogglePanel togglePanel;
+    public MenuPauseScript menuPauseScript;
 
     private float timerCountDown = 00.0f;
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     //Level Manager
     public void Start()
     {
-        togglePanel.doPause();
+        //menuPauseScript.Pause();
         Time.timeScale = 1.0f;
         endGame.SetActive(false);
         
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
         if (numberOfEnemiesToSpawn <= enemiesSpawned && enemiesSpawned <= numberOfEnemies && false)
         {
-            togglePanel.doPause();
+            menuPauseScript.Pause();
             endGame.SetActive(true);
             SaveScore();
         }

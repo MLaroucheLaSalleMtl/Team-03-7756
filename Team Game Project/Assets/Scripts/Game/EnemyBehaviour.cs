@@ -23,6 +23,11 @@ public class EnemyBehaviour : MonoBehaviour
         //enemy.MoveSpeed = 1.0f;
     }
 
+    public void Attack()
+    {
+
+    }
+
     public void Update()
     {
         //Increase movement speed at score threshold
@@ -42,6 +47,9 @@ public class EnemyBehaviour : MonoBehaviour
             //enemy.MoveSpeed = 2.0f;
         }
 
+        Debug.Log(target.transform.position.x);
+
+        if (gameObject.transform.position.x - target.transform.position.x < 5) { }
         Move();
 
        
@@ -50,7 +58,7 @@ public class EnemyBehaviour : MonoBehaviour
     public void Move()
     {
 
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, Time.deltaTime * moveSpeed); //enemy.MoveSpeed);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(-1.28f, 1.3f), Time.deltaTime * moveSpeed); //enemy.MoveSpeed);
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -58,7 +66,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (col.gameObject.tag == "Projectile")
         {
             TakeDamage();
-            Destroy(col.gameObject);
         }
     }
 

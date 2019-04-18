@@ -10,20 +10,21 @@ public class Spawner : MonoBehaviour
     public GameManager gameManager;
 
     float spawnRate;      //time between each spawn. this will later be made dynamic to increase spawn rates
-    float startSpawnAt = 0f;
+    float startSpawnAt = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
 
-        spawnRate = UnityEngine.Random.Range(5f, 10f);
+
+        spawnRate = 6.3f - (0.2f * gameManager.levelNumber);
+        SpawnTest();
         InvokeRepeating("SpawnTest", startSpawnAt, spawnRate);
     }
 
     public void Update()
     {
-        spawnRate = UnityEngine.Random.Range(5 * Time.deltaTime, 10 * Time.deltaTime);
+        //spawnRate = UnityEngine.Random.Range(5 * Time.deltaTime, 10 * Time.deltaTime);
     }
 
     
