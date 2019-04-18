@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text pointText;
     public int highestScore;
     [SerializeField] private Text timerText;
-    private float timerCountDown = 90.0f;
+    private float timer = 0.0f;
     private Enemy enemy;
     [SerializeField] private GameObject endGame;
 
@@ -30,11 +30,11 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        timerCountDown -= Time.deltaTime;
-        timerText.text = timerCountDown.ToString("0:00");
+        timer += Time.deltaTime;
+        timerText.text = timer.ToString("F2");
         pointText.text = "SCORE " + totalPoints.ToString("D4");
 
-        if (timerCountDown <= 0.0f)
+        if (timer <= 0.0f)
         {
             Time.timeScale = 0.0f;
             //LEVEL OVER
