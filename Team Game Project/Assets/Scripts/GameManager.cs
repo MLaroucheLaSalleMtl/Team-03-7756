@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         timer += Time.deltaTime;
-        timerText.text = timer.ToString("F2");
+        timerText.text = timer.ToString("F1");
         pointText.text = "SCORE " + totalPoints.ToString("D4");
 
         if (timer <= 0.0f)
