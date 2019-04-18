@@ -116,10 +116,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1979634449153206037, guid: c25d19dcf66d14f4c8454bd2c4e1c098, type: 3}
-  movementSpeed: 0.5
   prefabLoot: {fileID: 8826140832128967661, guid: a4d62bc94881d324cb3454fe881c70bf,
     type: 3}
+  enemyPoints: 25
   healthPoints: 70
+  moveSpeed: 4
 --- !u!60 &6669333792190360162
 PolygonCollider2D:
   m_ObjectHideFlags: 0
