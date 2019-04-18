@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 public class Spawner : MonoBehaviour
@@ -16,17 +14,26 @@ public class Spawner : MonoBehaviour
     void Start()
     {
 
-
-        spawnRate = 6.3f - (0.2f * gameManager.levelNumber);
-        SpawnTest();
-        InvokeRepeating("SpawnTest", startSpawnAt, spawnRate);
+        StartSpawning();
     }
 
     public void Update()
     {
+
+        
         //spawnRate = UnityEngine.Random.Range(5 * Time.deltaTime, 10 * Time.deltaTime);
     }
 
+    public void StartSpawning()
+    {
+        
+        gameManager.levelNumber++;
+        gameManager.numberOfEnemiesToSpawn += gameManager.levelNumber * gameManager.levelNumber;
+        spawnRate = 6.9f - (0.1f * gameManager.levelNumber);
+        Debug.Log(spawnRate);
+        SpawnTest();
+        InvokeRepeating("SpawnTest", startSpawnAt, spawnRate);
+    }
     
 
     //make spawner repeat for number of times

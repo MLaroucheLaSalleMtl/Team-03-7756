@@ -25,7 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Attack()
     {
-
+        gameManager.health -= Random.Range(15, 25);
     }
 
     public void Update()
@@ -46,10 +46,14 @@ public class EnemyBehaviour : MonoBehaviour
             moveSpeed = 1.5f;
             //enemy.MoveSpeed = 2.0f;
         }
+        
 
-        Debug.Log(target.transform.position.x);
+        if (gameObject.transform.position.x - target.transform.position.x < 5)
+        {
+            Attack();
+            TakeDamage();
+        }
 
-        if (gameObject.transform.position.x - target.transform.position.x < 5) { }
         Move();
 
        

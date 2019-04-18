@@ -263,11 +263,14 @@ MonoBehaviour:
   highestScore: 0
   timerText: {fileID: 1468087938}
   menuPauseScript: {fileID: 1969315146}
+  healthTx: {fileID: 0}
+  health: 100
+  waveTx: {fileID: 873588472}
   endGame: {fileID: 1259374764}
   numberOfEnemiesToSpawn: 0
   numberOfEnemies: 0
   enemiesSpawned: 0
-  levelNumber: 0
+  levelNumber: 1
   totalPoints: 0
   leaderboardNameInput: {fileID: 0}
   playerName: {fileID: 2095996803}

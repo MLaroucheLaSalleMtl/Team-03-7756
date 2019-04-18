@@ -12,6 +12,14 @@ public class GameManager : MonoBehaviour
 
     public MenuPauseScript menuPauseScript;
 
+    public Spawner spawner;
+
+    public Text healthTx;
+
+    public float health;
+
+    public Text waveTx;
+
     private float timerCountDown = 00.0f;
 
     private Enemy enemy;
@@ -19,6 +27,7 @@ public class GameManager : MonoBehaviour
     public int numberOfEnemiesToSpawn;
     public int numberOfEnemies;
     public int enemiesSpawned;
+
 
     public int levelNumber = 1;
 
@@ -35,9 +44,9 @@ public class GameManager : MonoBehaviour
     {
         //menuPauseScript.Pause();
         Time.timeScale = 1.0f;
-        endGame.SetActive(false);
+        //endGame.SetActive(false);
         
-        numberOfEnemiesToSpawn = levelNumber * 5;
+        
 
     }
 
@@ -46,11 +55,20 @@ public class GameManager : MonoBehaviour
         timerCountDown += Time.deltaTime;
         timerText.text = timerCountDown.ToString("0:00");
         pointText.text = "SCORE: " + totalPoints.ToString("D4");
+        waveTx.text = levelNumber.ToString("00");
 
-        if (numberOfEnemiesToSpawn <= enemiesSpawned && enemiesSpawned <= numberOfEnemies && false)
+        if (health <= 0)
         {
-            menuPauseScript.Pause();
             endGame.SetActive(true);
+        }
+
+        if (numberOfEnemiesToSpawn <= enemiesSpawned && enemiesSpawned <= numberOfEnemies)
+        {
+            spawner.StartSpawning(); 
+            
+            Debug.Log("haha");
+            //menuPauseScript.Pause();
+            //endGame.SetActive(true);
             SaveScore();
         }
 
@@ -61,9 +79,10 @@ public class GameManager : MonoBehaviour
     //ScoreBoard System
     public void AddPoints()
     {
-        //totalPoints += enemy.EnemyPoints;
-       
+        totalPoints += enemy.EnemyPoints;
+        health += Random.Range(1, 5);
     }
+
     public void SaveScore()
     {
                 //GetScore
