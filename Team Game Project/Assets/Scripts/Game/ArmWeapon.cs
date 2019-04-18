@@ -4,30 +4,22 @@ using UnityEngine;
 
 public class ArmWeapon : MonoBehaviour
 {
-    //[SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject projectile;
 
-    private Animation animation;
+    private Animator animator;
 
     public void Awake()
     {
-        animation = gameObject.GetComponent<Animation>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
-    public void Start()
+    public void OnMouseDown()
     {
-        animation.Play("Grow");
-    }
-
-    public void Update()
-    {
-        if(!animation.isPlaying)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Done"))
         {
-            OnMouseClick();
+            Destroy(gameObject);
+            // Instantiate projectile at loading position
+            Instantiate(projectile, new Vector3(-3, 1.25f, 0), Quaternion.Euler(0, 0, 0));
         }
-    }
-
-    public void OnMouseClick()
-    {
-        Destroy(gameObject);
     }
 }
