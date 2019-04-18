@@ -6495,7 +6495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1117981990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13043,11 +13043,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583128527}
     m_Modifications:
-    - target: {fileID: 6425304748350168783, guid: 7eb3e17e3a745ff4f9d78bb189dde38b,
-        type: 3}
-      propertyPath: m_Name
-      value: BallistaObject
-      objectReference: {fileID: 0}
     - target: {fileID: 6425304748350168776, guid: 7eb3e17e3a745ff4f9d78bb189dde38b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13102,6 +13097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425304748350168783, guid: 7eb3e17e3a745ff4f9d78bb189dde38b,
+        type: 3}
+      propertyPath: m_Name
+      value: BallistaObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb3e17e3a745ff4f9d78bb189dde38b, type: 3}
@@ -13192,11 +13192,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1967325626}
     m_Modifications:
-    - target: {fileID: 8746976917476983871, guid: 7ff360205b7bacd4fbc8213b184e3b9c,
-        type: 3}
-      propertyPath: m_Name
-      value: star0
-      objectReference: {fileID: 0}
     - target: {fileID: 8746976917476983870, guid: 7ff360205b7bacd4fbc8213b184e3b9c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13251,6 +13246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746976917476983871, guid: 7ff360205b7bacd4fbc8213b184e3b9c,
+        type: 3}
+      propertyPath: m_Name
+      value: star0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ff360205b7bacd4fbc8213b184e3b9c, type: 3}

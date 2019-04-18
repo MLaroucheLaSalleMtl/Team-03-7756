@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     private GameManager gameManager;
 
     [SerializeField] GameObject target;
-    [SerializeField] private GameObject prefabLoot;
+    //[SerializeField] private GameObject prefabLoot;
 
     [SerializeField] private int enemyPoints = 25;
     [SerializeField] private int healthPoints = 90;
@@ -81,7 +81,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (healthPoints <= 0 && !isDead)//enemy.HealthPoints <= 0)
         {
             gameManager.AddPoints();
-            Instantiate(prefabLoot, gameObject.transform.position, gameObject.transform.rotation);
+            //Instantiate(prefabLoot, gameObject.transform.position, gameObject.transform.rotation);
             isDead = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
             Destroy(gameObject, 1.0f);
