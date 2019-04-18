@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         timerCountDown -= Time.deltaTime;
         timerText.text = timerCountDown.ToString("0:00");
-        pointText.text = "SCORE: " + totalPoints.ToString("D4");
+        pointText.text = "SCORE " + totalPoints.ToString("D4");
 
         if (timerCountDown <= 0.0f)
         {
