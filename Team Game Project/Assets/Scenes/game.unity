@@ -263,6 +263,7 @@ MonoBehaviour:
   pointText: {fileID: 1905787167}
   highestScore: 0
   timerText: {fileID: 1468087938}
+  togglePanel: {fileID: 0}
   endGame: {fileID: 1259374764}
   numberOfEnemiesToSpawn: 0
   numberOfEnemies: 0
@@ -1215,7 +1216,7 @@ GameObject:
   - component: {fileID: 331870737}
   - component: {fileID: 331870739}
   - component: {fileID: 331870738}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Floor_Front x-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2101,7 +2102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688877844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7e5fff04afa49d438827afd852e4b57, type: 3}
   m_Name: 
@@ -2110,6 +2111,7 @@ MonoBehaviour:
   - {fileID: 688877845}
   testEnemyPrefab: {fileID: 245341784926838576, guid: ee30bfa491dfed643befb6ece62a0b03,
     type: 3}
+  gameManager: {fileID: 16691474}
 --- !u!50 &688877847
 Rigidbody2D:
   serializedVersion: 4
@@ -2906,6 +2908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864056364}
+  - component: {fileID: 864056365}
   m_Layer: 0
   m_Name: SpawnerSystem
   m_TagString: Untagged
@@ -2930,6 +2933,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864056365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864056363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e5fff04afa49d438827afd852e4b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointArray:
+  - {fileID: 688877845}
+  - {fileID: 1448324695}
+  testEnemyPrefab: {fileID: 245341784926838576, guid: ee30bfa491dfed643befb6ece62a0b03,
+    type: 3}
+  gameManager: {fileID: 16691474}
 --- !u!1 &870988922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,7 +4245,7 @@ GameObject:
   - component: {fileID: 1327737758}
   - component: {fileID: 1327737759}
   - component: {fileID: 1327737760}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Ramp_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4702,7 +4723,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448324694}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7e5fff04afa49d438827afd852e4b57, type: 3}
   m_Name: 
@@ -4710,6 +4731,7 @@ MonoBehaviour:
   spawnPointArray:
   - {fileID: 1448324695}
   testEnemyPrefab: {fileID: 1899021472}
+  gameManager: {fileID: 16691474}
 --- !u!50 &1448324697
 Rigidbody2D:
   serializedVersion: 4
@@ -7042,6 +7064,11 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 800336584}
+    - target: {fileID: 2234193599538981590, guid: 4ac48e7021096c64288e20d868325aee,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 32dcb6040ef93334db76144dcd7798ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ac48e7021096c64288e20d868325aee, type: 3}
 --- !u!1 &2095996801
